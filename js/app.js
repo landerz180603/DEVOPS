@@ -16,9 +16,15 @@ function addTask(){
 
     li.textContent = task;
 
+// Agregar evento de clic para marcar la tarea como completada
+    li.onclick = function(){
+    li.style.textDecoration = "line-through";
+}
+
     document
         .getElementById("taskList")
         .appendChild(li);
 
     input.value = "";
+
 }
