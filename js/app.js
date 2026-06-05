@@ -13,8 +13,14 @@ function addTask(){
 
     const li =
         document.createElement("li");
-
-    li.textContent = task;
+        
+// Agregar contenido a la tarea y el botón de eliminar
+    li.innerHTML = `
+        ${task}
+        <button onclick="this.parentElement.remove()">
+        Eliminar
+        </button>
+        `;
 
 // Agregar evento de clic para marcar la tarea como completada
     li.onclick = function(){
